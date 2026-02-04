@@ -1,0 +1,13 @@
+name = "cdn-indoorplayground"
+main = "src/index.ts"
+compatibility_date = "2026-02-03"
+
+# 环境变量：缓存配置
+[vars]
+ORIGIN_DOMAIN = "indoorplayground.com.cn"  # 原站域名
+CACHE_TTL_HOURS = 744  # 缓存时间（小时），默认31天=744小时
+
+# 可选：绑定自定义域名
+routes = [
+  { pattern = "cdn.indoorplayground.com.cn/*", custom_domain = true },
+]
